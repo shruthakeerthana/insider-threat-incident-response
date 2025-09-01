@@ -1,4 +1,3 @@
-#!/bin/bash
 
 # Create manager user with sudo privileges
 sudo adduser manager --gecos "Manager,,," --disabled-password
