@@ -1,0 +1,18 @@
+Aug 18 12:38:30 kali sudo:    insider : TTY=pts/0 ; PWD=/home/insider ; USER=root ; COMMAND=/bin/bash
+Aug 18 12:38:31 kali sudo: pam_unix(sudo:session): session opened for user root by insider(uid=1002)
+Aug 18 12:42:00 kali sudo: pam_unix(sudo:session): session closed for user root
+
+Aug 18 12:43:15 kali sshd[2345]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.10  user=insider
+Aug 18 12:45:55 kali sshd[2345]: Accepted password for insider from 192.168.1.10 port 54321 ssh2
+
+Aug 18 12:49:23 kali sudo:    insider : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/usermod -aG sudo insider
+Aug 18 12:49:23 kali sudo: pam_unix(sudo:session): session opened for user root by insider(uid=1002)
+Aug 18 12:49:24 kali sudo: pam_unix(sudo:session): session closed for user root
+
+Aug 18 12:56:10 kali sudo:    insider : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/cat /srv/company_secrets/secret_file.txt
+Aug 18 12:56:11 kali sudo: pam_unix(sudo:session): session opened for user root by insider(uid=1002)
+Aug 18 12:56:12 kali sudo: pam_unix(sudo:session): session closed for user root
+
+Aug 18 13:30:00 kali sudo:    kali : TTY=pts/3 ; PWD=/home/kali ; USER=root ; COMMAND=/usr/sbin/deluser insider sudo
+Aug 18 13:30:01 kali sudo: pam_unix(sudo:session): session opened for user root by kali(uid=1000)
+Aug 18 13:30:02 kali sudo: pam_unix(sudo:session): session closed for user root
